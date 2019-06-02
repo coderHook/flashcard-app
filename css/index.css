@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.topnav {
+    display: flex;
+    background-color: #85DCBC;
+    font-size: 1.5rem;
+    padding: 2rem;
+    justify-content: space-between;
+}
+
+.topnav a {
+    color: white;
+    text-decoration: none
+}
+
+
+.content {
+    flex: 1 0 auto; 
+}
+
+.card {
+    width: 450px;
+    height: 200px;                 /* Set width of cards */
+    border: 1px solid #EF9A9A;    /* Set up Border */
+    border-radius: 4px;           /* Slightly Curve edges */
+    overflow: hidden;             /* Fixes the corners */
+    display: flex;                /* Children use Flexbox */
+    flex-direction: column;       /* Rotate Axis */
+    margin: 200px auto;
+    position: relative;
+    transform;
+      /* transition-property: background, border-radius, transform; */
+    transition-property: all;
+    transition-duration: 1s;
+    /* transition-delay: 2s, 4s; */
+    transition-timing-function: ease-in;
+    box-shadow: 5px 10px; 
+}
+
+.card:hover {
+  transform: rotateY(360deg);
+  box-shadow: none;
+}
+
+  .card-header {
+    color: #E8A87C;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #EF9A9A;
+    background-color: #FBEEC1;
+    padding: 5px 10px;
+  }
+
+  .card-main {
+    display: flex;              
+    flex-direction: column;     
+    justify-content: center;    
+    align-items: center;        
+    padding: 15px 0; 
+    margin: 15px;
+  }
+ 
+  .main-description {
+    margin-top: 20px;
+    color: #D32F2F;
+    font-size: 12px;
+    text-align: center;
+  }
+
+.btn-submit {
+  background-color: #85DCBC;
+  margin: 50px auto;
+  height: 80px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.btn-submit:hover {
+  width: 210px;
+  height: 90px;
+}
+
+.footer {
+    background-color: #85DCBC;
+    width: 100%;
+    flex-shrink: 0;
+    padding-bottom: 30px;
+}
