@@ -1,6 +1,10 @@
 //Insert data. (In the future we shoudl export it form another file or API)
 
 let jsq = [
+    {
+        question: '',
+        answer: ''
+    },
     { question:  "Inside which HTML element do we put the JavaScript?",
       questionType:  2,
                 correctChoice: "script",
@@ -64,6 +68,11 @@ let jsq = [
 
 let data = [
     {
+        question: 'A question will appear once you clicked the button, his Answer will appear when you hover over the card',
+        answer: 'This will be the Answer,\b Good Luck!'
+
+    },
+    {
         question: '1. Can you name two programming paradigms important for JavaScript app developers?',
         answer: 'JavaScript is a multi-paradigm language, supporting imperative/procedural programming along with OOP (Object-Oriented Programming) and functional programming. JavaScript supports OOP with prototypal inheritance.',
     },
@@ -83,6 +92,8 @@ let data = [
 
 let count = 0;
 
+nextQuestion();
+
 /* - - - - - F U N C T I O N S - - - - - - - - */
 function nextQuestion(){
     console.log('im here');
@@ -93,3 +104,16 @@ function nextQuestion(){
 
     console.log(question.innerText);
 }
+
+function showAnswer(){
+    console.log('im in showAnswer');
+    let answerSelect = document.querySelector('.main-description');
+    answerSelect.innerText = data[count].answer;
+}
+
+function hideAnswer(){
+    console.log('im in hideAnswer');
+    let answerSelect = document.querySelector('.main-description');
+    answerSelect.innerText = '';
+}
+
