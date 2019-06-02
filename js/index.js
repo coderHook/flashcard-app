@@ -1,5 +1,4 @@
 //Insert data. (In the future we shoudl export it form another file or API)
-
 let data = [
     {
         question: 'A question will appear once you clicked the button, his Answer will appear when you hover over the card',
@@ -101,4 +100,3 @@ function hideAnswer(){
     let answerSelect = document.querySelector('.main-description');
     answerSelect.innerText = '';
 }
-
