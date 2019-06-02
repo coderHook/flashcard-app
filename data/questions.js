@@ -242,3 +242,6 @@ var htmlq = [
                                     score: 5,
                                     }
                                   ]
+
+
+module.exports = htmlq;

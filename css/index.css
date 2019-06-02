@@ -41,6 +41,19 @@ body {
     display: flex;                /* Children use Flexbox */
     flex-direction: column;       /* Rotate Axis */
     margin: 200px auto;
+    position: relative;
+    transform;
+      /* transition-property: background, border-radius, transform; */
+    transition-property: all;
+    transition-duration: 1s;
+    /* transition-delay: 2s, 4s; */
+    transition-timing-function: ease-in;
+    box-shadow: 5px 10px; 
+}
+
+.card:hover {
+  transform: rotateY(360deg);
+  box-shadow: none;
 }
 
   .card-header {
@@ -54,19 +67,36 @@ body {
   }
 
   .card-main {
-    display: flex;              /* Children use Flexbox */
-    flex-direction: column;     /* Rotate Axis to Vertical */
-    justify-content: center;    /* Group Children in Center */
-    align-items: center;        /* Group Children in Center (+axis) */
-    padding: 15px 0;            /* Add padding to the top/bottom */
+    display: flex;              
+    flex-direction: column;     
+    justify-content: center;    
+    align-items: center;        
+    padding: 15px 0; 
+    margin: 15px;
   }
  
   .main-description {
+    margin-top: 20px;
     color: #D32F2F;
     font-size: 12px;
     text-align: center;
   }
 
+.btn-submit {
+  background-color: #85DCBC;
+  margin: 50px auto;
+  height: 80px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.btn-submit:hover {
+  width: 210px;
+  height: 90px;
+}
 
 .footer {
     background-color: #85DCBC;
