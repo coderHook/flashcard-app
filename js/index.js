@@ -30,6 +30,8 @@ initialize();
 /* - - - - - F U N C T I O N S - - - - - - - - */
 function initialize(){
     count = 0;
+    let num = Math.floor(Math.random() * data.length);
+    console.log(num)
 }
 
 function nextQuestion(){
