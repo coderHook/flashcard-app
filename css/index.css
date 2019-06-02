@@ -98,6 +98,10 @@ body {
   height: 90px;
 }
 
+.instruction {
+  margin-top: 50px;;
+}
+
 .footer {
     background-color: #85DCBC;
     width: 100%;
