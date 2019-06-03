@@ -66,7 +66,8 @@ let obj = {
             question: '2. What are tags?',
             answer: 'Content is placed in between HTML tags in order to properly format it. It makes use of the less than symbol (<) and the greater than symbol (>). A slash symbol is also used as a closing tag. For example:'
         }
-    ]
+    ],
+    'My Questions': []
 }
 
 let count;
@@ -133,6 +134,8 @@ function addFlashcard(){
         console.log('new category added', obj.category);
     }
 
+    //Lets also add the students card to a new category "My Cards"
+    obj['My Questions'].push(quesAns);
 
 
 }
