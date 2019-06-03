@@ -21,10 +21,11 @@
             <a href="#">Add Question</a>
         </div>
         
-        <form action="">asdajdalkdja
-            <input type="text" placeHolder="Insert Category">
-            <input type="text" placeholder="Insert Question">
-            <input type="text" placeholder = "Insert the answer">
+        <form onsubmit="addFlashcard(); return false">
+            <input id="newCategory" type="text" placeHolder="Insert Category" >
+            <input  id="newQuestion" type="text" placeholder="Insert Question">
+            <input id="newAnswer" type="text" placeholder = "Insert the answer">
+            <button>Submit</button>
         </form>
 
         <div class="content">
@@ -45,7 +46,7 @@
             <div class="credits">coderhook</div>
         </footer>
         
-        <script type="module" src="./data/javascript.js"></script>
+        <script src="./data/javascript.js"></script>
         <script src="./js/index.js"></script>
 
     </body>

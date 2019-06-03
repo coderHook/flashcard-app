@@ -1,4 +1,4 @@
-export const jsq = [
+const jsq = [
     { question:  "Inside which HTML element do we put the JavaScript?",
       questionType:  2,
                 correctChoice: "script",

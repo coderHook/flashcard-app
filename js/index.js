@@ -73,6 +73,8 @@ let count;
 
 initialize();
 
+console.log(jsq);
+
 /* - - - - - F U N C T I O N S - - - - - - - - */
 function initialize(){
     count = 0;
@@ -99,4 +101,31 @@ function hideAnswer(){
     console.log('im in hideAnswer');
     let answerSelect = document.querySelector('.main-description');
     answerSelect.innerText = '';
+}
+
+function addFlashcard(){
+    console.log('I am a new flashcard!!');
+    let newCategory = document.querySelector('#newCategory');
+    let newQuestion = document.querySelector('#newQuestion');
+    let newAnswer = document.querySelector('#newAnswer');
+
+    category = newCategory.value;
+    obj[category] = [];
+
+    let quesAns = {
+        'question': newQuestion.value,
+        'answer': newAnswer.value
+    }
+
+    console.log('this new category', newCategory.value);
+
+    if (!newCategory.value || !newQuestion.value || !newAnswer) {
+        alert('To add a new Card you must \n - Add a category, Question and Answer in the Form');
+    } else {
+        obj[category].push(quesAns); 
+        console.log('added new question', quesAns);
+    }
+
+
+
 }
