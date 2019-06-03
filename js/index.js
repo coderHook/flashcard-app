@@ -97,7 +97,7 @@ function nextQuestion(){
 function showAnswer(){
     console.log('im in showAnswer');
     let answerSelect = document.querySelector('.main-description');
-    answerSelect.innerText = data[count].answer;
+    answerSelect.innerText = obj[category][count].answer;
 }
 
 function hideAnswer(){
