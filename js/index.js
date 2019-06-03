@@ -70,6 +70,7 @@ let obj = {
 }
 
 let count;
+let category = 'javascript';
 
 initialize();
 
@@ -78,7 +79,6 @@ console.log(jsq);
 /* - - - - - F U N C T I O N S - - - - - - - - */
 function initialize(){
     count = 0;
-    
     //let num = Math.floor(Math.random() * data.length);
    
 }
@@ -87,7 +87,9 @@ function nextQuestion(){
     console.log('im here');
     count++
     let question = document.querySelector('.question-title');
-    question.innerText = data[count].question ;
+    let thisCategory = obj[category];
+
+    question.innerText = thisCategory[count].question ;
     
     console.log(question.innerText);
 }
@@ -122,9 +124,8 @@ function addFlashcard(){
     if (!newCategory.value || !newQuestion.value || !newAnswer) {
         alert('To add a new Card you must \n - Add a category, Question and Answer in the Form');
     } else if (obj[category]) {
-        console.log('la categoria ya existe');
+        console.log('Category already exists.');
         obj[category].push(quesAns); 
-
     } else {
         obj[category] = [];
         obj[category].push(quesAns); 
