@@ -70,10 +70,9 @@ let obj = {
     'My-Questions': []
 }
 
-let count;
+let count = 0;
 let category = 'javascript';
 
-initialize();
 
 console.log(jsq);
 
@@ -85,30 +84,26 @@ function initialize(){
 }
 
 function nextQuestion(){
-    console.log('im here');
     count++
     let question = document.querySelector('.question-title');
     let thisCategory = obj[category];
 
     question.innerText = thisCategory[count].question ;
-    
-    console.log(question.innerText);
 }
 
 function showAnswer(){
-    console.log('im in showAnswer');
     let answerSelect = document.querySelector('.main-description');
     answerSelect.innerText = obj[category][count].answer;
 }
 
 function hideAnswer(){
-    console.log('im in hideAnswer');
     let answerSelect = document.querySelector('.main-description');
     answerSelect.innerText = '';
 }
 
 function addFlashcard(){
     console.log('I am a new flashcard!!');
+
     let newCategory = document.querySelector('#newCategory');
     let newQuestion = document.querySelector('#newQuestion');
     let newAnswer = document.querySelector('#newAnswer');
@@ -135,7 +130,7 @@ function addFlashcard(){
     }
 
     //Lets also add the students card to a new category "My Cards"
-    obj['My Questions'].push(quesAns);
+    obj['My-Questions'].push(quesAns);
 
 
 }
@@ -147,7 +142,7 @@ function switchCategories(){
     console.log('selecte: ', selectedCat.value)
 
     category = selectedCat.value;
-    count = 0;
+    count = -1;
     nextQuestion();
 
 }
