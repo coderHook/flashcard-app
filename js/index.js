@@ -24,7 +24,7 @@ let data = [
 ]
 
 let obj = {
-    javascript: [
+    Javascript: [
         {
             question: '0. A question will appear once you clicked the button, his Answer will appear when you hover over the card',
             answer: 'This will be the Answer,\b Good Luck!'
@@ -47,7 +47,7 @@ let obj = {
             answer: 'What you should expect is at least 3 methods, publish/subscribe/unsubscribe which are fronts for managing a keyd object witharray d values of the listeners so when a publish occurs, all subscribers get the same event. Extra credit for throwing setTimeouts for async processing and using call/apply to pass in arguments to subscribers.'
         }
     ],
-    css: [
+    CSS: [
         {
             question: '1. What is CSS?',
             answer: 'CSS outline the style of an HTML webpage, it is a language by which we can set the behavior of an HTML webpage. It describes how the HTML content will be shown on screen.'
@@ -57,7 +57,7 @@ let obj = {
             answer: 'External style sheet is very useful as we write all the styling codes in a single file and it can be used anywhere by just referencing the link of that external style sheet file.'
         }
     ],
-    html: [
+    HTML: [
         {
             question: '1. What is HTML?',
             answer: 'HTML is short for HyperText Markup Language and is the language of the World Wide Web. It is the standard text formatting language used for creating and displaying pages on the Web. HTML documents are made up of two things: the content and the tags that format it for proper display on pages.'
@@ -71,7 +71,7 @@ let obj = {
 }
 
 let count = 0;
-let category = 'javascript';
+let category = 'Javascript';
 
 
 console.log(jsq);
@@ -150,6 +150,12 @@ function switchCategories(){
     console.log('selecte: ', selectedCat.value)
 
     category = selectedCat.value;
+
+    //Change the title of the card.
+    let header = document.querySelector('.card-header');
+    console.log(header);
+    header.innerHTML = `${category} Questions`
+
     count = -1;
     nextQuestion();
 
