@@ -139,3 +139,8 @@ function addFlashcard(){
 
 
 }
+
+// Getting different categories
+function switchCategories(){
+    console.log('Switching categories');
+}
