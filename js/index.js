@@ -125,13 +125,23 @@ function addFlashcard(){
     } else {
         obj[category] = [];
         obj[category].push(quesAns); 
-
         console.log('new category added', obj.category);
+
+        //Add the new category to the select menu.
+        addCategoryToMenu(category);
     }
 
     //Lets also add the students card to a new category "My Cards"
     obj['My-Questions'].push(quesAns);
 
+}
+
+function addCategoryToMenu(category){
+    let selectedCat = document.getElementById('select-category');
+    console.log('addToCategoryMenu: ', selectedCat);
+    let newSelect = `<option value="${category}">${category}</option>`
+
+    selectedCat.insertAdjacentHTML('beforeend', newSelect);
 
 }
 
