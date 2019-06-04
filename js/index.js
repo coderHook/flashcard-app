@@ -67,7 +67,7 @@ let obj = {
             answer: 'Content is placed in between HTML tags in order to properly format it. It makes use of the less than symbol (<) and the greater than symbol (>). A slash symbol is also used as a closing tag. For example:'
         }
     ],
-    'My Questions': []
+    'My-Questions': []
 }
 
 let count;
@@ -143,4 +143,7 @@ function addFlashcard(){
 // Getting different categories
 function switchCategories(){
     console.log('Switching categories');
+    let selectedCat = document.getElementById('select-category');
+    console.log('selecte: ', selectedCat.value)
+
 }
