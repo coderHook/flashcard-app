@@ -26,7 +26,7 @@ let data = [
 let obj = {
     javascript: [
         {
-            question: 'A question will appear once you clicked the button, his Answer will appear when you hover over the card',
+            question: '0. A question will appear once you clicked the button, his Answer will appear when you hover over the card',
             answer: 'This will be the Answer,\b Good Luck!'
     
         },
@@ -145,5 +145,9 @@ function switchCategories(){
     console.log('Switching categories');
     let selectedCat = document.getElementById('select-category');
     console.log('selecte: ', selectedCat.value)
+
+    category = selectedCat.value;
+    count = 0;
+    nextQuestion();
 
 }
