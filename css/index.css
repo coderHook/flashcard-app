@@ -108,3 +108,7 @@ body {
     flex-shrink: 0;
     padding-bottom: 30px;
 }
+
+#my-questions {
+  font-weight: bold;
+}

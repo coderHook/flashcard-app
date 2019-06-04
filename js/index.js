@@ -115,8 +115,6 @@ function addFlashcard(){
         'answer': newAnswer.value
     }
 
-    console.log(obj[category]);
-
     if (!newCategory.value || !newQuestion.value || !newAnswer) {
         alert('To add a new Card you must \n - Add a category, Question and Answer in the Form');
     } else if (obj[category]) {
