@@ -8,7 +8,7 @@ Fashcards on the user can choose a topic and randomly he will get the questions,
 
 - [ ] As a student I want to see a random question so I can test myself.
 
-- [ ] As a student I want to access the flashcard app from the internet (GitHub pages) so I can test myself anywhere I am.
+- [X] As a student I want to access the flashcard app from the internet (GitHub pages) so I can test myself anywhere I am.
 
 - [x] As a student I want to see the answer to the question so I can see if I was right.
 
