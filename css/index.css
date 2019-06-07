@@ -108,3 +108,18 @@ body {
     flex-shrink: 0;
     padding-bottom: 30px;
 }
+
+#my-questions {
+  font-weight: bold;
+}
+
+#select-category {
+  background-color: #85DCBC;
+  font-size: 1.3rem;
+  text-align-last: center;
+  border: none;
+}
+
+#select-category:active {
+  border: none;
+}
