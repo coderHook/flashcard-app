@@ -48,6 +48,9 @@ let obj = getFromLocalStorage() || {
 
 let count = 0;
 let category = 'Javascript';
+let random = Math.floor(Math.random() * obj[category].length);
+
+console.log("Randommmmmmmm", random);
 
 console.log(jsq);
 
@@ -59,11 +62,13 @@ function initialize(){
 }
 
 function nextQuestion(){
-    count++
+    // count++
+    let random = Math.floor(Math.random() * obj[category].length);
+
     let question = document.querySelector('.question-title');
     let thisCategory = obj[category];
 
-    question.innerText = thisCategory[count].question ;
+    question.innerText = thisCategory[random].question ;
 }
 
 function showAnswer(){
