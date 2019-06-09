@@ -116,6 +116,10 @@ function deleteFlashcard(){
     console.log('Deleting flashcard', obj[category], count)
     //use pop on the array to remove
     obj[category].splice(count, 1)
+
+    saveLocalStorage();
+
+    nextQuestion();
 }
 
 function addCategoryToMenu(category){
