@@ -3,7 +3,7 @@ let obj = getFromLocalStorage() || {
     Javascript: [
         {
             question: '0. A question will appear once you clicked the button, his Answer will appear when you hover over the card',
-            answer: 'This will be the Answer,\b Good Luck!'
+            answer: 'This will be the Answer, Good Luck!'
     
         },
         {
@@ -109,6 +109,17 @@ function addFlashcard(){
 
     saveLocalStorage();
 
+}
+
+function deleteFlashcard(){
+    //get the id of the card
+    console.log('Deleting flashcard', obj[category], count)
+    //use pop on the array to remove
+    obj[category].splice(count, 1)
+
+    saveLocalStorage();
+
+    nextQuestion();
 }
 
 function addCategoryToMenu(category){
