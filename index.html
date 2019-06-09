@@ -10,7 +10,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css/index.css">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -44,9 +45,12 @@
                   <div class="instruction"><b><i>Flip the card to see the answer!</i></b></div>
                 </div>
               </div>
+        </div>       
+
+        <div class="buttons">
+            <button class="btn-submit" onclick="nextQuestion()">Next Question</button>
+            <span id="remove"><i class="fa fa-remove"></i> </span>
         </div>
-        
-        <button class="btn-submit" onclick="nextQuestion()">Next Question</button>
 
 
         <footer class="footer">

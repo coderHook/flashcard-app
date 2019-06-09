@@ -123,3 +123,17 @@ body {
 #select-category:active {
   border: none;
 }
+
+.buttons {
+  margin: 0 auto;
+}
+
+#remove {
+  margin-left: 60px;
+  font-size:48px;
+  color:red;
+}
+
+#remove:hover {
+  font-size: 60px;
+}

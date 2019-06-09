@@ -111,6 +111,12 @@ function addFlashcard(){
 
 }
 
+function deleteFlashcard(){
+    //get the id of the card
+
+    //use pop on the array to remove
+}
+
 function addCategoryToMenu(category){
     let selectedCat = document.getElementById('select-category');
     console.log('addToCategoryMenu: ', selectedCat);
