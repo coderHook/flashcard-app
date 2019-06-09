@@ -2,7 +2,7 @@
 
 Flashcards on the user can choose a topic and randomly he will get the questions, being able after hovering the card to see the answer. 
 
-##Features:
+## Features:
 
 (checked are the ones that are implemented)
 
