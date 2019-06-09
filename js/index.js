@@ -73,7 +73,6 @@ let obj = getFromLocalStorage() || {
 let count = 0;
 let category = 'Javascript';
 
-getFromLocalStorage();
 console.log(jsq);
 
 /* - - - - - F U N C T I O N S - - - - - - - - */
@@ -147,7 +146,6 @@ function addCategoryToMenu(category){
 
 // Getting different categories
 function switchCategories(){
-    getFromLocalStorage();
     console.log('Switching categories');
     let selectedCat = document.getElementById('select-category');
     console.log('selecte: ', selectedCat.value)
@@ -172,6 +170,19 @@ function saveLocalStorage(){
 function getFromLocalStorage(){
     if( localStorage.getItem('data') ) {
         console.log('Getting info from localStorage!!')
+
+        let local = JSON.parse(localStorage.getItem('data'));
+        console.log('Local', Object.getOwnPropertyNames(local))
+        
+        let properties = Object.getOwnPropertyNames(local);
+
+        properties = properties.slice(4, properties.length);
+        console.log(properties)
+
+        properties.map(category => {
+            return addCategoryToMenu(category)
+        })
+
         return JSON.parse(localStorage.getItem('data'));
     }
     
