@@ -23,7 +23,7 @@
 //     }
 // ]
 
-let obj = {
+let obj = getFromLocalStorage() || {
     Javascript: [
         {
             question: '0. A question will appear once you clicked the button, his Answer will appear when you hover over the card',
@@ -73,7 +73,7 @@ let obj = {
 let count = 0;
 let category = 'Javascript';
 
-
+getFromLocalStorage();
 console.log(jsq);
 
 /* - - - - - F U N C T I O N S - - - - - - - - */
@@ -132,6 +132,8 @@ function addFlashcard(){
     //Lets also add the students card to a new category "My Cards"
     obj['My-Questions'].push(quesAns);
 
+    saveLocalStorage();
+
 }
 
 function addCategoryToMenu(category){
@@ -145,6 +147,7 @@ function addCategoryToMenu(category){
 
 // Getting different categories
 function switchCategories(){
+    getFromLocalStorage();
     console.log('Switching categories');
     let selectedCat = document.getElementById('select-category');
     console.log('selecte: ', selectedCat.value)
@@ -159,4 +162,17 @@ function switchCategories(){
     count = -1;
     nextQuestion();
 
+}
+
+//Local Storage
+function saveLocalStorage(){
+    localStorage.setItem('data', JSON.stringify(obj));
+}
+
+function getFromLocalStorage(){
+    if( localStorage.getItem('data') ) {
+        console.log('Getting info from localStorage!!')
+        return JSON.parse(localStorage.getItem('data'));
+    }
+    
 }
