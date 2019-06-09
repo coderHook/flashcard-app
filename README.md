@@ -1,6 +1,6 @@
 # Flashcard-app
 
-Fashcards on the user can choose a topic and randomly he will get the questions, being able after hovering the card to see the answer. 
+Flashcards on the user can choose a topic and randomly he will get the questions, being able after hovering the card to see the answer. 
 
 ##Features:
 
