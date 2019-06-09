@@ -48,7 +48,7 @@ let obj = getFromLocalStorage() || {
 
 let count = 0;
 let category = 'Javascript';
-let random = Math.floor(Math.random() * obj[category].length);
+let random = 0;
 
 console.log("Randommmmmmmm", random);
 
@@ -63,7 +63,7 @@ function initialize(){
 
 function nextQuestion(){
     // count++
-    let random = Math.floor(Math.random() * obj[category].length);
+    random = Math.floor(Math.random() * obj[category].length);
 
     let question = document.querySelector('.question-title');
     let thisCategory = obj[category];
@@ -73,7 +73,7 @@ function nextQuestion(){
 
 function showAnswer(){
     let answerSelect = document.querySelector('.main-description');
-    answerSelect.innerText = obj[category][count].answer;
+    answerSelect.innerText = obj[category][random].answer;
 }
 
 function hideAnswer(){
@@ -117,10 +117,7 @@ function addFlashcard(){
 }
 
 function deleteFlashcard(){
-    //get the id of the card
-    console.log('Deleting flashcard', obj[category], count)
-    //use pop on the array to remove
-    obj[category].splice(count, 1)
+    obj[category].splice(random, 1)
 
     saveLocalStorage();
 
@@ -149,9 +146,7 @@ function switchCategories(){
     console.log(header);
     header.innerHTML = `${category} Questions`
 
-    count = -1;
     nextQuestion();
-
 }
 
 //Local Storage
