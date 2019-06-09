@@ -20,4 +20,4 @@ Fashcards on the user can choose a topic and randomly he will get the questions,
 
 - [ ] As a student I want to be able to delete flashcards so I can keep testing myself with relevant questions
 
-- [ ] As a student I want my new flashcards that I made to be stored when I leave the page so I can shut down my browser (hint: you might want to use localstorage since we haven’t made apis yet, if you want to use an api checkout jsonbin)
+- [X] As a student I want my new flashcards that I made to be stored when I leave the page so I can shut down my browser (hint: you might want to use localstorage since we haven’t made apis yet, if you want to use an api checkout jsonbin)
